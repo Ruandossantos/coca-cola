@@ -1,3 +1,7 @@
+:root{
+    --color-principal: #ee232d;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,12 +9,18 @@
 }
 
 body {
-    background-color: #0c0c0c;
+    background-image: linear-gradient(45deg, #000000fd, #00000060), url(/imgs/107371214-1707432871092-gettyimages-1771013944-AFP_342Q93N.jpeg);
     min-height: 100Vh;
     min-width: 100vw;
     overflow: hidden;
     padding: 1%;
     position: relative;
+    animation: ani-inicial 1s 1 ease-in-out;
+}
+@keyframes ani-inicial {
+    0%{
+        opacity: 0;
+    }
 }
 
 body::after {
@@ -21,7 +31,8 @@ body::after {
     width: 800px;
     height: 800px;
     border-radius: 50%;
-    background-color: rgb(241, 6, 6);
+    background-color: var(--color-principal);
+    box-shadow: 1px 1px 13px  rgba(233, 233, 233, 0.295);
 }
 
 .header-menu {
@@ -41,6 +52,7 @@ body::after {
 
 .headar-menu-logo img {
     width: 60%;
+    animation: hani-hover 3s 1 ease-in-out;
 }
 
 .header-menu-nav {
@@ -59,14 +71,26 @@ body::after {
     font-weight: 400;
     font-family: "Kanit", sans-serif;
     cursor: pointer;
+    transition: 0.8s;
+    animation: hani-hover 1.2s 1 ease-in-out;
+}
+@keyframes hani-hover {
+    0%{
+        transform: translateY(-30px);
+    }
+}
+.header-menu-nav ul li:hover {
+    color: var(--color-principal);
+    scale: .9;
 }
 
-.conteiner-main{
+.conteiner-main {
     width: 100%;
     min-height: 92vh;
-    display: flex; 
-    gap: 170px;  
+    display: flex;
+    gap: 170px;
 }
+
 .conteiner-sessao-esquerdo-descicao {
     width: 40%;
     height: 60vh;
@@ -76,28 +100,29 @@ body::after {
     margin-left: 50px;
 }
 
-.conteiner-sessao-esquerdo-descicao h1{
+.conteiner-sessao-esquerdo-descicao h1 {
     color: white;
     font-size: 4rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 15%;
 }
-.conteiner-sessao-esquerdo-descicao h2{
-    color: red;
+
+.conteiner-sessao-esquerdo-descicao h2 {
+    color: var(--color-principal);
     font-size: 4rem;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 3%;
 }
 
-.conteiner-sessao-esquerdo-descicao span{
+.conteiner-sessao-esquerdo-descicao span {
     color: white;
     font-size: 1.2rem;
 }
 
-.butoes-down-descricao{
-    background-color: red;
+.butoes-down-descricao {
+    background-color: var(--color-principal);
     width: 210px;
     height: 30px;
     gap: 20px;
@@ -111,73 +136,88 @@ body::after {
     left: 0px;
 }
 
-.butoes-down-descricao i{
-   font-size: 1.4rem;
+.butoes-down-descricao i {
+    font-size: 1rem;
+    color: white;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.butoes-down-descricao i:hover{
+    color:#0c0c0c;
+    scale: .9;
+
 }
 
 
-
-.conteiner-sessao-diretito-descicao{
+.conteiner-sessao-diretito-descicao {
     width: 600px;
     min-height: 94vh;
     z-index: 999999;
     display: flex;
     justify-content: space-between;
-    position: relative;    
+    position: relative;
 }
 
 
-.conteiner-sessao-diretito-descicao img{
-    
-}
-.item1{
+.conteiner-sessao-diretito-descicao img {}
+
+.item1 {
     width: 160px;
     position: absolute;
     bottom: 0px;
     right: 50px;
-    rotate:-30deg;
+    rotate: -30deg;
     animation: animaitens 9s infinite ease-in-out;
 }
-.item2{
+
+.item2 {
     width: 160px;
     position: absolute;
     bottom: 0px;
     right: -60px;
-    rotate:-20deg;
+    rotate: -20deg;
     animation: animaitens 12s infinite ease-in-out;
 }
-.item3{
+
+.item3 {
     width: 160px;
     position: absolute;
     bottom: 0px;
     right: 190px;
-    rotate:-50deg;
+    rotate: -50deg;
     bottom: -80px;
     animation: animaitens 7s infinite ease-in-out;
 }
-.item4{
+
+.item4 {
     width: 160px;
     position: absolute;
     bottom: 0px;
     right: 140px;
-    rotate:-40deg;
+    rotate: -40deg;
     bottom: -60px;
     animation: animaitens 15s infinite ease-in-out;
 }
+
 @keyframes animaitens {
-    0%{
+    0% {
         transform: translateY(0px);
     }
-    25%{
+
+    25% {
         transform: translateY(10px);
     }
-    50%{
+
+    50% {
         transform: translateY(0px);
     }
-    75%{
+
+    75% {
         transform: translateY(10px);
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
     }
 }
