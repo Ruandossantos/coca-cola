@@ -7,7 +7,27 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.anuncio{
+    background-color: firebrick;
+    width: 900px;
+    height: 250px;
+    display: flex;
+}
+.anuncio1{
+    background-color: rgb(34, 178, 46);
+    width: 300px;
+    height: 250px;
+}
+.anuncio2{
+    background-color: rgb(34, 68, 178);
+    width: 300px;
+    height: 250px;
+}
+.anuncio3{
+    background-color: rgb(178, 34, 159);
+    width: 300px;
+    height: 250px;
+}
 body {
     background-image: linear-gradient(45deg, #000000fd, #00000060), url(/imgs/107371214-1707432871092-gettyimages-1771013944-AFP_342Q93N.jpeg);
     min-height: 100Vh;
